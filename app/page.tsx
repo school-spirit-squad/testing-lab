@@ -1,6 +1,13 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function Home() {
   return (
@@ -11,18 +18,26 @@ export default function Home() {
           <CardDescription>A simple app for Playwright testing</CardDescription>
         </CardHeader>
         <CardContent>
-          <p className="mb-4">This is a demo application to showcase end-to-end testing with Playwright.</p>
-          <p className="mb-4">Navigate through the pages and try submitting the contact form.</p>
+          <p className="mb-4">
+            This is a demo application to showcase end-to-end testing with
+            Playwright.
+          </p>
+          <p className="mb-4">
+            Navigate through the pages and try submitting the contact form.
+          </p>
         </CardContent>
-        <CardFooter className="flex justify-between">
-          <Button asChild>
+        <CardFooter className="flex flex-wrap gap-2 justify-center">
+          <Button asChild className="m-1">
             <Link href="/about">About Us</Link>
           </Button>
-          <Button asChild>
+          <Button asChild className="m-1">
+            <Link href="/services">Our Services</Link>
+          </Button>
+          <Button asChild className="m-1">
             <Link href="/contact">Contact Us</Link>
           </Button>
         </CardFooter>
       </Card>
     </main>
-  )
+  );
 }

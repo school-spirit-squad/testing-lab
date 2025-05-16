@@ -1,6 +1,12 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function About() {
   return (
@@ -10,18 +16,26 @@ export default function About() {
           <CardTitle className="text-2xl">About Us</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="mb-4">This is the about page of our demo application.</p>
-          <p className="mb-4">We're showcasing how to test navigation and interactions with Playwright.</p>
+          <p className="mb-4">
+            This is the about page of our demo application.
+          </p>
+          <p className="mb-4">
+            We&apos;re showcasing how to test navigation and interactions with
+            Playwright.
+          </p>
         </CardContent>
-        <CardFooter className="flex justify-between">
-          <Button asChild>
+        <CardFooter className="flex flex-wrap gap-2 justify-center">
+          <Button asChild className="m-1">
             <Link href="/">Home</Link>
           </Button>
-          <Button asChild>
+          <Button asChild className="m-1">
+            <Link href="/services">Our Services</Link>
+          </Button>
+          <Button asChild className="m-1">
             <Link href="/contact">Contact Us</Link>
           </Button>
         </CardFooter>
       </Card>
     </main>
-  )
+  );
 }
