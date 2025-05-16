@@ -27,10 +27,13 @@ test.describe("UI Elements", () => {
 
     const buttons = page.getByRole("link");
 
-    await expect(buttons).toHaveCount(2);
+    await expect(buttons).toHaveCount(3);
 
     const aboutButton = page.getByRole("link", { name: "About Us" });
     await expect(aboutButton).toBeVisible();
+
+    const servicesButton = page.getByRole("link", { name: "Our Services" });
+    await expect(servicesButton).toBeVisible();
 
     const contactButton = page.getByRole("link", { name: "Contact Us" });
     await expect(contactButton).toBeVisible();
@@ -63,7 +66,6 @@ test.describe("UI Elements", () => {
   });
 
   test("page is responsive", async ({ page }) => {
-    // Test on mobile viewport
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto("/");
 
